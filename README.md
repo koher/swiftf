@@ -39,6 +39,17 @@ a.each { println(a) } // 2
 b.each { println(b) } // prints nothing
 ```
 
+#### filter
+
+```swift
+let a: Int? = 2
+let b: Int? = 3
+let c: Int? = nil
+a.filter { $0 % 2 == 0 } // Optional(2)
+b.filter { $0 % 2 == 0 } // nil
+c.filter { $0 % 2 == 0 } // nil
+```
+
 #### reduce
 
 ```swift

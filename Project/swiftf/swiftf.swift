@@ -14,8 +14,12 @@ extension Optional {
 		return map(transform).reduce(nil) { $1 }
 	}
 	
+	func filter(includeElement: T -> Bool) -> T? {
+		return flatMap { includeElement($0) ? $0 : nil }
+	}
+	
 	func each(action: T -> ()) {
-		map(action)
+		reduce(()) { action($1) }
 	}
 }
 
