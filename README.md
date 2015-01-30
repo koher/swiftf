@@ -74,6 +74,11 @@ let r1: String = name1.reduce("Hello") { $0 + ", " + $1} // Hello, world
 let r2: String = name2.reduce("Hello") { $0 + ", " + $1} // Hello
 ```
 
+How to Install
+----------------------------
+
+Put [swiftf.swift](Project/swiftf/swiftf.swift) into your project.
+
 License
 ----------------------------
 
