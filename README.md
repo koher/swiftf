@@ -47,18 +47,6 @@ b.each { println($0) } // prints nothing
 let a: Int? = 2
 let b: Int? = 3
 let c: Int? = nil
-
-let r1: Int? = a.filter { $0 % 2 == 0 } // Optional(2)
-let r2: Int? = b.filter { $0 % 2 == 0 } // nil
-let r3: Int? = c.filter { $0 % 2 == 0 } // nil
-```
-
-#### filter
-
-```swift
-let a: Int? = 2
-let b: Int? = 3
-let c: Int? = nil
 a.filter { $0 % 2 == 0 } // Optional(2)
 b.filter { $0 % 2 == 0 } // nil
 c.filter { $0 % 2 == 0 } // nil
