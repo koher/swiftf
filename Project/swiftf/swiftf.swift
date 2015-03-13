@@ -25,7 +25,7 @@ extension Optional {
 
 extension Array {
 	func flatMap<U>(transform: T -> [U]) -> [U] {
-		return map(transform).reduce([], +)
+		return map(transform).reduce([], combine: +)
 	}
 	
 	func each(action: T -> ()) {
