@@ -10,10 +10,6 @@ extension Optional {
 		}
 	}
 	
-	func flatMap<U>(transform: T -> U?) -> U? {
-		return map(transform).reduce(nil) { $1 }
-	}
-	
 	func filter(includeElement: T -> Bool) -> T? {
 		return flatMap { includeElement($0) ? $0 : nil }
 	}
@@ -24,10 +20,6 @@ extension Optional {
 }
 
 extension Array {
-	func flatMap<U>(transform: T -> [U]) -> [U] {
-		return map(transform).reduce([], combine: +)
-	}
-	
 	func each(action: T -> ()) {
 		reduce(()) { action($1) }
 	}
