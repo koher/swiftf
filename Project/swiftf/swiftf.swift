@@ -23,4 +23,8 @@ extension Array {
 	func each(action: T -> ()) {
 		reduce(()) { action($1) }
 	}
+    
+    func flatMap<U>(transform: T -> U?) -> [U] {
+        return flatMap { transform($0).map { [$0] } ?? [] }
+    }
 }

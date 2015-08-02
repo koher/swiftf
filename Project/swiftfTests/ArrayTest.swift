@@ -15,6 +15,11 @@ class ArrayTest: XCTestCase {
 		
 		XCTAssertEqual(r1, [2, 3, 5, 7, 11, 13])
 		XCTAssertEqual(r2, [1, 2, 2, 3, 3, 3])
+        
+        let strings: [String] = ["2", "3", "four", "5"]
+        let numbers = strings.flatMap { $0.toInt() }
+        
+        XCTAssertEqual(numbers, [2, 3, 5])
     }
 	
 	func testEach() {

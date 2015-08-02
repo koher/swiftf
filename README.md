@@ -8,10 +8,11 @@ Usage
 
 ### Array
 
-#### flatMap
+#### flatMap of Swift 2.0
 
 ```swift
-let r: [Int] = [1, 2, 3].flatMap { [Int](count: $0, repeatedValue: $0) } // [1, 2, 2, 3, 3, 3]
+let strings: [String] = ["2", "3", "four", "5"]
+let numbers = strings.flatMap { $0.toInt() } // [2, 3, 5]
 ```
 
 #### each
@@ -21,15 +22,6 @@ let r: [Int] = [1, 2, 3].flatMap { [Int](count: $0, repeatedValue: $0) } // [1, 
 ```
 
 ### Optional
-
-#### flatMap
-
-```swift
-let a: Int? = 2
-let b: Int? = 3
-
-let r: Int? = a.flatMap { a0 in b.flatMap { b0 in a0 + b0 } } // Optional(5)
-```
 
 #### each
 
