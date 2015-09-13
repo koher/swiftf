@@ -1,4 +1,5 @@
 import XCTest
+import swiftf
 
 class OptionalTest: XCTestCase {
     override func setUp() {
@@ -22,8 +23,8 @@ class OptionalTest: XCTestCase {
         let a: Int? = 2
         let b: Int? = nil
         
-        a.each { XCTAssertEqual($0, a!) }
-        b.each { XCTFail("Never reaches here: \($0)") }
+        a.forEach { XCTAssertEqual($0, a!) }
+        b.forEach { XCTFail("Never reaches here: \($0)") }
     }
     
     func testFilter() {

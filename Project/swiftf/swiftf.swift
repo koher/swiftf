@@ -1,7 +1,7 @@
 import Foundation
 
 extension Optional {
-    func reduce<U>(initial: U, @noescape combine: (U, T) -> U) -> U {
+    public func reduce<U>(initial: U, @noescape combine: (U, Wrapped) -> U) -> U {
         switch self {
         case .None:
             return initial
@@ -10,21 +10,11 @@ extension Optional {
         }
     }
     
-    func filter(@noescape includeElement: T -> Bool) -> T? {
+    public func filter(@noescape includeElement: Wrapped -> Bool) -> Wrapped? {
         return flatMap { includeElement($0) ? $0 : nil }
     }
     
-    func each(@noescape action: T -> ()) {
+    public func forEach(@noescape action: Wrapped -> ()) {
         reduce(()) { action($1) }
-    }
-}
-
-extension Array {
-    func each(@noescape action: T -> ()) {
-        reduce(()) { action($1) }
-    }
-    
-    func flatMap<U>(@noescape transform: T -> U?) -> [U] {
-        return flatMap { transform($0).map { [$0] } ?? [] }
     }
 }
