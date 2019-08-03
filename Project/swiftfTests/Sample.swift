@@ -6,7 +6,7 @@ class Sample: XCTestCase {
         ///// Optional /////
         
         // forEach
-        if true {
+        do {
             let a: Int? = 2
             let b: Int? = nil
             
@@ -15,7 +15,7 @@ class Sample: XCTestCase {
         }
         
         // filter
-        if true {
+        do {
             let a: Int? = 2
             let b: Int? = 3
             let c: Int? = nil
@@ -24,13 +24,13 @@ class Sample: XCTestCase {
             let r2: Int? = b.filter { $0 % 2 == 0 } // nil
             let r3: Int? = c.filter { $0 % 2 == 0 } // nil
             
-            print(r1)
-            print(r2)
-            print(r3)
+            print(r1.map { "\($0)" } ?? "nil")
+            print(r2.map { "\($0)" } ?? "nil")
+            print(r3.map { "\($0)" } ?? "nil")
         }
         
         // reduce
-        if true {
+        do {
             let name1: String? = "world"
             let name2: String? = nil
             

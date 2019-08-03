@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		D6BC3E8C1BA59908000ADE99 /* swiftf.h in Headers */ = {isa = PBXBuildFile; fileRef = D6BC3E8B1BA59908000ADE99 /* swiftf.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D6BC3E931BA59908000ADE99 /* swiftf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BC3E881BA59908000ADE99 /* swiftf.framework */; settings = {ASSET_TAGS = (); }; };
-		D6BC3EA31BA5991E000ADE99 /* swiftf.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BC3EA21BA5991E000ADE99 /* swiftf.swift */; settings = {ASSET_TAGS = (); }; };
-		D6BC3EA61BA5992D000ADE99 /* ArrayTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BC3EA41BA5992D000ADE99 /* ArrayTest.swift */; settings = {ASSET_TAGS = (); }; };
-		D6BC3EA71BA5992D000ADE99 /* OptionalTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BC3EA51BA5992D000ADE99 /* OptionalTest.swift */; settings = {ASSET_TAGS = (); }; };
-		D6BC3EB51BA59A9D000ADE99 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BC3EB41BA59A9D000ADE99 /* Sample.swift */; settings = {ASSET_TAGS = (); }; };
+		D6BC3E931BA59908000ADE99 /* swiftf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BC3E881BA59908000ADE99 /* swiftf.framework */; };
+		D6BC3EA31BA5991E000ADE99 /* swiftf.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BC3EA21BA5991E000ADE99 /* swiftf.swift */; };
+		D6BC3EA61BA5992D000ADE99 /* ArrayTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BC3EA41BA5992D000ADE99 /* ArrayTest.swift */; };
+		D6BC3EA71BA5992D000ADE99 /* OptionalTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BC3EA51BA5992D000ADE99 /* OptionalTest.swift */; };
+		D6BC3EB51BA59A9D000ADE99 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BC3EB41BA59A9D000ADE99 /* Sample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +168,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = D6BC3E7E1BA59908000ADE99;
@@ -332,6 +333,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -349,6 +351,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.koherent.swiftf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -359,6 +362,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.koherent.swiftfTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -369,6 +373,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.koherent.swiftfTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
